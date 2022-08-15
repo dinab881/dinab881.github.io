@@ -1,0 +1,10 @@
+<header class="main-header">
+  <nav class="main-header__navigation">
+    <div class="main-header__item" *ngFor="let link of navigationItems" routerLinkActive="main-header__item_active">
+      <a class="main-header__link" [routerLink]="link.path">
+        {{ link.title | translate }}
+      </a>
+      <span class="main-header__active-txt">{{ getDecorativeText(link.title | translate) }}</span>
+    </div>
+  </nav>
+</header>

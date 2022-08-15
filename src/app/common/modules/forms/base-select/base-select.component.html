@@ -1,0 +1,42 @@
+<div class="form-field">
+  <div *ngIf="label" class="form-field__label">
+    <span>{{ label }}</span>
+    <mat-error *ngIf="control?.invalid && errorMessage">{{ errorMessage }}</mat-error>
+  </div>
+
+  <mat-form-field class="form-field__field" [floatLabel]="floatLabel" [appearance]="appearance">
+    <mat-label *ngIf="placeholder">{{ placeholder }}</mat-label>
+    <button
+      mat-flat-button
+      color="accent"
+      (click)="onToggleChange($event)"
+      matPrefix
+      *ngIf="iconOn && iconOff"
+      class="form-field__prefix-btn"
+    >
+      <mat-icon>{{ isToggled ? iconOn : iconOff }}</mat-icon>
+    </button>
+    <mat-select
+      [panelClass]="panelClass"
+      [disableOptionCentering]="disableOptionCentering"
+      [id]="id"
+      [placeholder]="placeholder"
+      [formControl]="formControl"
+      [required]="required"
+      [multiple]="multiple"
+    >
+      <mat-select-trigger *ngIf="triggerTemplate">
+        <ng-container *ngTemplateOutlet="triggerTemplate; context: { $implicit: control.value }"></ng-container>
+      </mat-select-trigger>
+      <ng-container *ngIf="options">
+        <mat-option *ngFor="let option of options" [value]="getValue(option)" [disabled]="option.disabled">
+          <ng-container *ngIf="!optionTemplate; else withTemplate">{{ getTitle(option) }}</ng-container>
+          <ng-template #withTemplate>
+            <ng-container *ngTemplateOutlet="optionTemplate; context: { $implicit: option }"></ng-container>
+          </ng-template>
+        </mat-option>
+      </ng-container>
+    </mat-select>
+    <mat-error *ngIf="control && control.invalid && errorMessage && !label">{{ errorMessage }}</mat-error>
+  </mat-form-field>
+</div>

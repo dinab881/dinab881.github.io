@@ -1,0 +1,23 @@
+@import "variables/modules/breakpoints";
+
+.contact {
+  &__title {
+    color: var(--color-text);
+    text-transform: uppercase;
+    font-weight: var(--fw-medium);
+    font-family: var(--ff-second-font);
+    font-size: 2rem;
+    margin: 0 0 1.8rem;
+  }
+
+  &__content {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  @media (min-width: $tablet-s) {
+    max-width: 47.5rem;
+    margin: 0 auto 5rem;
+  }
+}

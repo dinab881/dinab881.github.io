@@ -1,0 +1,39 @@
+<aside class="games-filters">
+  <h2 class="games-filters__title">{{ 'GAMES_FILTERS.TITLE' | translate }}</h2>
+  <div class="games-filters__field games-filters__field-name">
+    <base-form-input
+      [control]="form?.name"
+      [inputType]="InputType.text"
+      [placeholder]="'GAMES_FILTERS.INPUT_NAME' | translate"
+      [label]="'GAMES_FILTERS.INPUT_NAME_LABEL' | translate"
+      class="games-filters__name-input"
+      appearance="legacy"
+    ></base-form-input>
+  </div>
+  <div class="games-filters__field games-filters__field-range">
+    <base-range-input
+      [control]="form?.score"
+      [label]="'GAMES_FILTERS.INPUT_SCORE_LABEL' | translate"
+      placeholder="1 - 100"
+      appearance="legacy"
+    ></base-range-input>
+  </div>
+
+  <div class="games-filters__field games-filters__field-order">
+    <base-select
+      [disableOptionCentering]="true"
+      [control]="form?.orderBy"
+      [label]="'GAMES_FILTERS.SELECT_ORDER' | translate"
+      [options]="orderOptions"
+      appearance="legacy"
+      iconOn="arrow_upward"
+      iconOff="arrow_downward"
+      panelClass="custom-panel-class"
+      [(isToggled)]="isAscendingOrder"
+      (isToggledChange)="changeOrderDirection()"
+    ></base-select>
+  </div>
+  <button class="games-filters__clear" color="accent" mat-flat-button (click)="clearFilters()">
+    {{ 'GAMES_FILTERS.CLEAR' | translate }}
+  </button>
+</aside>

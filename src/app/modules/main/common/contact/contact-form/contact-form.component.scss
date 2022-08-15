@@ -1,0 +1,39 @@
+@import "variables/modules/breakpoints";
+
+.contact-form {
+  padding: 2.3rem;
+  margin-top: 4.6rem;
+  background: var(--color-card-bg);
+
+  &__btn {
+    margin-left: auto;
+  }
+
+  &__field {
+    flex-grow: 1;
+    flex-basis: 100%;
+  }
+
+  &__title {
+    margin-bottom: 2.3rem;
+    font-size: 1.6rem;
+    font-family: var(--ff-second-font);
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.6rem 3.2rem;
+  }
+
+  @media (min-width: $tablet-s) {
+    &__field {
+      flex-grow: 1;
+      flex-basis: auto;
+
+      &.contact-form__field-message {
+        flex-basis: 100%;
+      }
+    }
+  }
+}

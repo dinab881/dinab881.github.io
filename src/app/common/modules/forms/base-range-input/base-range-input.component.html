@@ -1,0 +1,23 @@
+<label class="form-field">
+  <div *ngIf="label" class="form-field__label">
+    <span>{{ label }}</span>
+    <mat-error *ngIf="control?.invalid && errorMessage">{{ errorMessage }}</mat-error>
+  </div>
+  <mat-form-field [appearance]="appearance" [floatLabel]="floatLabel">
+    <mat-label *ngIf="placeholder">{{ placeholder }}</mat-label>
+    <mat-icon matPrefix *ngIf="icon">{{ icon }}</mat-icon>
+    <input
+      matInput
+      mask="09 - 009"
+      [allowNegativeNumbers]="false"
+      [dropSpecialCharacters]="false"
+      [maxLength]="maxLength"
+      [formControl]="innerControl"
+      [placeholder]="placeholder"
+      [required]="required"
+      [readonly]="readonly"
+      [autocomplete]="autocomplete"
+    />
+    <mat-error *ngIf="control?.invalid && errorMessage && !label">{{ errorMessage }}</mat-error>
+  </mat-form-field>
+</label>

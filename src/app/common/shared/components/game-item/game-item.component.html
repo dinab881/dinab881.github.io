@@ -1,0 +1,14 @@
+<div class="game-item">
+  <img class="game-item__img" [src]="null" [placeholder]="'https://via.placeholder.com/1/000000'" [alt]="game.name" />
+  <div class="game-item__card">
+    <h2 class="game-item__title">{{ game.name }}</h2>
+    <div class="game-item__date">
+      {{ 'CONTENT.RELEASE_DATE' | translate }} :
+      {{ game.firstReleaseDate | date: 'dd/MM/yyyy' }}
+    </div>
+    <div class="game-item__summary">{{ game.summary | truncate: 320 }}</div>
+    <span class="game-item__score">
+      {{ game.rating | number: '1.0-0' }}
+    </span>
+  </div>
+</div>

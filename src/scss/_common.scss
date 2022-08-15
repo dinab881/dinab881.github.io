@@ -1,0 +1,30 @@
+@import "variables/modules/colors";
+
+.spacer {
+  flex: 1 0 auto;
+}
+
+.mat-select-panel {
+  &.custom-panel-class {
+    margin-top: 2.5rem;
+    border-radius: 0;
+    background: var(--color-input-bg);
+    min-width: calc(100% + 24px) !important; /* stylelint-disable-line declaration-no-important */
+
+    &:not([class*="mat-elevation-z"]) {
+      box-shadow: none;
+    }
+
+    .mat-option {
+      line-height: 2em;
+      height: 2em;
+      padding: 0 1.6rem;
+      color: var(--color-text);
+
+      &.mat-selected:not(.mat-option-disabled) {
+        color: var(--color-text);
+        background: transparent;
+      }
+    }
+  }
+}

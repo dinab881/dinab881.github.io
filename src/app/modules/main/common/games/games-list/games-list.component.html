@@ -1,0 +1,10 @@
+<div class="games">
+  <games-filters></games-filters>
+  <loader-container [isLoading]="isLoading">
+    <ul class="games__list">
+      <li *ngFor="let item of filteredItems" class="games__item">
+        <game-item [game]="item"></game-item>
+      </li>
+    </ul>
+  </loader-container>
+</div>

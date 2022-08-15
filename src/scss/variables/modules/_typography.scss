@@ -1,0 +1,18 @@
+$main-font-family: "Mulish";
+$second-font-family: "Montserrat";
+
+:root {
+  // FONT-FAMILY
+
+  --ff-main-font: #{$main-font-family}, sans-serif;
+  --ff-second-font: #{$second-font-family}, sans-serif;
+  --fw-thin: 100;
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-normal: normal;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: bold;
+  --fw-extra-bold: 800;
+  --fw-ultra-bold: 900;
+}

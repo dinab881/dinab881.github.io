@@ -1,0 +1,81 @@
+@import "variables/modules/breakpoints";
+
+.game-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__card {
+    background: var(--color-card-bg);
+    padding: 2.1rem 1.8rem;
+    min-height: 14rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+    font-family: var(--ff-second-font);
+  }
+
+  &__date {
+    font-size: 1.4rem;
+    color: var(--color-text);
+  }
+
+  &__summary {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-top: 1.2rem;
+  }
+
+  &__score {
+    --size: 4rem;
+    display: inline-block;
+    border-radius: 50%;
+    width: var(--size);
+    line-height: var(--size);
+    background: var(--color-accent);
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-white);
+    position: absolute;
+    top: 1.3rem;
+    right: 1.8rem;
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    height: 12.4rem;
+  }
+
+  @media (min-width: $tablet-s) {
+    flex-direction: row;
+
+    &__card {
+      position: relative;
+      padding: 2.1rem 10.7rem 2.1rem 2.4rem;
+      flex-grow: 1;
+    }
+
+    &__score {
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 3.4rem;
+    }
+
+    &__img {
+      height: auto;
+      width: 12rem;
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: $desktop-s) {
+    &__card {
+      padding: 1.8rem 9.6rem 1.8rem 1.6rem;
+    }
+  }
+}

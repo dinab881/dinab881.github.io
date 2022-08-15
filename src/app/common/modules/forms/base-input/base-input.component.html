@@ -1,0 +1,42 @@
+<label class="form-field">
+  <div *ngIf="label" class="form-field__label">
+    <span>
+      {{ label }}
+      <i *ngIf="required" class="form-field__mark">*</i>
+    </span>
+    <mat-error class="form-field__label-error" *ngIf="(control?.dirty || control?.touched) && control?.invalid && errorMessage">
+      {{ errorMessage }}
+    </mat-error>
+  </div>
+
+  <mat-form-field [appearance]="appearance" [floatLabel]="floatLabel">
+    <mat-label *ngIf="placeholder">{{ placeholder }}</mat-label>
+    <mat-icon matPrefix *ngIf="icon">{{ icon }}</mat-icon>
+    <input
+      matInput
+      [maxLength]="maxLength"
+      [type]="type"
+      [formControl]="formControl"
+      [placeholder]="placeholder"
+      [required]="required"
+      [readonly]="readonly"
+      [autocomplete]="autocomplete"
+      (keydown.enter)="onEnter($event)"
+    />
+    <button *ngIf="isPasswordInput" [disabled]="disabled" mat-icon-button matSuffix tabindex="-1" type="button" (click)="togglePassword()">
+      <mat-icon>{{ buttonIcon }}</mat-icon>
+    </button>
+    <button
+      *ngIf="isSearchInput"
+      [disabled]="disabled"
+      mat-icon-button
+      matSuffix
+      tabindex="-1"
+      type="button"
+      (click)="search.emit(formControl.value)"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+    <mat-error *ngIf="control?.invalid && errorMessage && !label">{{ errorMessage }}</mat-error>
+  </mat-form-field>
+</label>

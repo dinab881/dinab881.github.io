@@ -1,0 +1,80 @@
+@import "variables/modules/breakpoints";
+
+:host {
+  .games-filters {
+    @media (min-width: $desktop-s) {
+      position: sticky;
+      top: 13.4rem;
+    }
+  }
+}
+
+.games-filters {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-card-bg);
+  padding: 2.2rem 1.5rem;
+  margin-bottom: 6rem;
+  row-gap: 3.4rem;
+
+  &__title {
+    font-size: 1.7rem;
+    font-family: var(--ff-second-font);
+  }
+
+  @media (min-width: $tablet-s) {
+    flex-direction: row;
+    margin-bottom: 6.4rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__title {
+      flex-basis: 100%;
+      width: 100%;
+    }
+
+    &__field {
+      &.games-filters__field-name {
+        flex-basis: 100%;
+        width: 100%;
+      }
+
+      &.games-filters__field-order {
+        min-width: 37.8rem;
+        flex-grow: 1;
+        margin-left: 3.3rem;
+        margin-right: 3.3rem;
+      }
+
+      &.games-filters__field-range {
+        margin-bottom: 0;
+      }
+    }
+
+    &__clear {
+      align-self: flex-end;
+    }
+  }
+
+  @media (min-width: $desktop-s) {
+    width: 23.3rem;
+    padding: 2.2rem 1.9rem;
+
+    &__field {
+      flex-basis: 100%;
+      width: 100%;
+
+      &.games-filters__field-order {
+        min-width: auto;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &__clear {
+      align-self: flex-end;
+      margin-left: auto;
+    }
+  }
+}

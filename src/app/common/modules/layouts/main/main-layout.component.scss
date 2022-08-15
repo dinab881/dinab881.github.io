@@ -1,0 +1,22 @@
+@import "variables/modules/breakpoints";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: 100vh;
+  overflow-y: auto;
+
+  &__content {
+    padding: 0 2rem;
+    max-width: 119.4rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

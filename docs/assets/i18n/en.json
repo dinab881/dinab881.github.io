@@ -1,0 +1,56 @@
+{
+  "INPUT_NAME": {},
+  "BUTTON_NAME": {},
+  "NAV": {
+    "VIDEO_GAMES": "Video Games",
+    "CONTACT": "Contact"
+  },
+  "GAMES_FILTERS": {
+    "TITLE": "Filter results",
+    "INPUT_NAME": "Text string",
+    "INPUT_NAME_LABEL": "Name (contains)",
+    "INPUT_SCORE_LABEL": "Minimum score",
+    "SELECT_ORDER": "Order by",
+    "DATE_OPTION": "Release date",
+    "SCORE_OPTION": "Score",
+    "NAME_OPTION": "Name",
+    "CLEAR": "Clear"
+  },
+  "CONTACT": {
+    "TITLE": "Get in touch",
+    "SUBTITLE": "Contact form",
+    "CONTENT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "INPUT_NAME": "Name",
+    "INPUT_EMAIL": "Email",
+    "TEXTAREA_MESSAGE": "Message",
+    "SEND": "Send"
+  },
+
+  "CONTENT": {
+    "RELEASE_DATE": "Release date"
+  },
+  "CUSTOM_NOTIFICATIONS": {
+    "HELLO": "Hello!",
+    "ERROR": "Error",
+    "SUCCESS": "Success"
+  },
+  "ERROR_MESSAGE": {
+    "REQUIRED": "{{fieldName}} is required.",
+    "MIN": "The value must be higher than or equal to {{value}}.",
+    "MIN_LENGTH": "The value must contain at least {{value}} characters.",
+    "MAX": "The value must be less than or equal to {{value}}.",
+    "MAX_LENGTH": "The value must not contain more than {{value}} characters.",
+    "EMAIL": "Email address is not valid.",
+    "PHONE": "Incorrect format of phone number.",
+    "URL": "Invalid url format.",
+    "PASSWORD": "The password must consist of letters (uppercase and lowercase), numbers and symbols."
+  },
+  "BACKEND_ERRORS": {
+    "INVALID_REQUEST": "Invalid Request",
+    "INVALID_GRANT": "Invalid email or password",
+    "NOT_FOUND": "Not found",
+    "THE_REASON_IS_MISSING": "The reason is missing",
+    "ACCESS_DENIED": "You haven't got permissions for access to this area.",
+    "USER_NOT_ALLOWED_BY_CLIENT": "This user is not allowed by the client"
+  }
+}

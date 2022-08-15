@@ -1,0 +1,14 @@
+@import "variables/modules/breakpoints";
+
+.games {
+  @media (min-width: $desktop-s) {
+    display: flex;
+    gap: 2.3rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.7rem;
+  }
+}

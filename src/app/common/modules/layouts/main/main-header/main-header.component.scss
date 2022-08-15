@@ -1,0 +1,68 @@
+@import "variables/modules/breakpoints";
+
+.main-header {
+  background-image: var(--gradient-bg);
+  background-size: 100vw 100vh;
+  max-width: 119.4rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    line-height: 1.5;
+    z-index: 1;
+    color: var(--color-white);
+    font-weight: var(--fw-medium);
+    min-width: 14rem;
+    width: 100%;
+    padding: 0.6em 2rem 0 3rem;
+    text-decoration: none;
+    font-family: var(--ff-second-font);
+
+    &:hover {
+      background: var(--color-wireframe-hover);
+    }
+  }
+
+  &__active-txt {
+    display: none;
+  }
+
+  &__item_active &__active-txt {
+    z-index: 0;
+    font-size: 1.7em;
+    display: block;
+    position: absolute;
+    font-weight: var(--fw-bold);
+    color: var(--color-card-bg);
+    top: 0;
+  }
+
+  @media (min-width: $desktop-s) {
+    &__navigation {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__link {
+      padding: 1em 2rem 0.6em 3rem;
+    }
+
+    &__item_active &__active-txt {
+      font-size: 2em;
+    }
+  }
+}

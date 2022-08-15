@@ -1,0 +1,31 @@
+<div class="contact-form">
+  <h2 class="contact-form__title">{{ 'CONTACT.SUBTITLE' | translate }}</h2>
+  <form [formGroup]="formGroup" class="contact-form__form" (ngSubmit)="onSubmit()">
+    <base-form-input
+      [required]="true"
+      [control]="form?.name"
+      [label]="'CONTACT.INPUT_NAME' | translate"
+      [inputType]="InputType.text"
+      appearance="legacy"
+      class="contact-form__field contact-form__field-name"
+    ></base-form-input>
+    <base-form-input
+      [required]="true"
+      [control]="form?.email"
+      [label]="'CONTACT.INPUT_EMAIL' | translate"
+      [inputType]="InputType.email"
+      appearance="legacy"
+      class="contact-form__field contact-form__field-email"
+    ></base-form-input>
+    <base-textarea
+      [required]="true"
+      [control]="form?.message"
+      [label]="'CONTACT.TEXTAREA_MESSAGE' | translate"
+      appearance="legacy"
+      class="contact-form__field contact-form__field-message"
+    ></base-textarea>
+    <button color="accent" class="contact-form__btn" mat-flat-button>
+      {{ 'CONTACT.SEND' | translate }}
+    </button>
+  </form>
+</div>

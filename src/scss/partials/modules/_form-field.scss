@@ -1,0 +1,20 @@
+.form-field {
+  &__label {
+    margin-bottom: 1.1rem;
+    font-family: var(--ff-second-font);
+    font-size: 1.2rem;
+  }
+
+  &__label-error {
+    &.mat-error {
+      display: inline-block;
+      font-size: 1rem;
+      padding-left: 1.3rem;
+      color: var(--color-accent);
+    }
+  }
+
+  &__mark {
+    color: var(--color-accent);
+  }
+}
