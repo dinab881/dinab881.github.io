@@ -55,8 +55,8 @@ Thumbs.db
 /coverage/*
 
 # config files
-**/token.json
-**/token.*.json
+#**/token.json
+#**/token.*.json
 **/config.json
 **/config.js
 !/config/**/*
